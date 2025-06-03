@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Typing Master</h1>
+    <h3>Put your typing skills to test!</h3>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="settings">
+        <div class="checkbox-group">
+          <input type="checkbox" id="strictMode">
+          <label for="strictMode">Strict Mode</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="successMessage" class="hidden">
+      🎉 Well done! 🎉
+    </div>
+
+    <div class="quote-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressBar"></div>
+      </div>
+      <div id="quoteDisplay" class="quote"></div>
+    </div>
+
+    <textarea id="quoteInput" placeholder="Start typing here... (Press Esc to restart, Tab to change difficulty)" autofocus></textarea>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-label">Time</div>
+        <div class="stat-value"><span id="timer">0</span> sec</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">WPM</div>
+        <div class="stat-value" id="wpm">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Accuracy</div>
+        <div class="stat-value" id="accuracy">100%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Errors</div>
+        <div class="stat-value" id="errors">0</div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="restartBtn">Restart (Esc)</button>
+      <button id="newQuoteBtn">New Quote (Ctrl+N)</button>
+    </div>
+
+    <div class="keyboard-shortcuts">
+      <div class="shortcuts-title">Keyboard Shortcuts:</div>
+      <div class="shortcut"><span class="key">Esc</span> Restart</div>
+      <div class="shortcut"><span class="key">Ctrl+N</span> New Quote</div>
+      <div class="shortcut"><span class="key">Tab</span> Change Difficulty</div>
+      <div class="shortcut"><span class="key">Ctrl+S</span> Toggle Strict Mode</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
